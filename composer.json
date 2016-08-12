@@ -1,0 +1,36 @@
+{
+    "name": "jim-moser/zf2-validators-empty-or-test",
+    "description": "Unit testing for jim-moser/zf2-validators-empty-or package.",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "validator",
+        "validation",
+        "zf2"
+    ],
+    "homepage": "https://github.com/jim-moser/zf2-validators-empty-or-test",
+    "authors": [
+        {
+            "name": "Jim Moser",
+            "email": "jmoser@epicride.info",
+            "homepage": "http://epicride.info/jmoser/zendframework"
+        }
+    ],
+    "repositories": 
+    [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jim-moser/zf2-validators-empty-or"
+        }
+    ],
+    "require": {
+    	"jim-moser/zf2-validators-empty-or": "@dev",
+    	"zendframework/zend-servicemanager": "2.*",
+    	"phpunit/phpunit":                   "~4"
+    },
+    "autoload": {
+        "psr-4": {
+            "JimMoser\\ValidatorTest\\": "test/"
+        }
+    }
+}
