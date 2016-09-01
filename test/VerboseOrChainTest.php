@@ -15,9 +15,11 @@ use Zend\Validator\ValidatorPluginManager;
  * Unit test class for Validator\VerboseOrChain.
  *
  * @author    Jim Moser <jmoser@epicride.info>
- * @link      http://github.com/jim-moser/zf2/validator for source repository
+ * @link      http://github.com/jim-moser/zf2-validators-empty-or-test for 
+ *            source repository.
  * @copyright Copyright (c) May 24, 2016 Jim Moser
- * @license   LICENSE.txt at http://github.com/jim-moser/zf2/validator  
+ * @license   LICENSE.txt at http://github.com/jim-moser/
+ *            zf2-validators-empty-or-test  
  *            New BSD License
  */
 class VerboseOrChainTest extends \PHPUnit_Framework_TestCase

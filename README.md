@@ -12,10 +12,11 @@ will instruct Composer to install both this package and the
 zf2-validators-empty-or package.
 
 Related packages:
-	jim-moser/zf2-validators-empty-or
-	jim-moser/zf2-validators-empty-or-test
-	jim-moser/zf2-validators-empty-or-plugin
-	jim-moser/zf2-validators-empty-or-plugin-test
+
+* jim-moser/zf2-validators-empty-or
+* jim-moser/zf2-validators-empty-or-test
+* jim-moser/zf2-validators-empty-or-plugin
+* jim-moser/zf2-validators-empty-or-plugin-test
 	
 A brief description of the related packages listed above can be found in the 
 README.md file for the jim-moser/zf2-validators-empty-or package available at 
@@ -37,12 +38,12 @@ README.md file for the jim-moser/zf2-validators-empty-or package available at
 		(Zend/Validator/ValidatorPluginManager). If your application uses the 
 		validator plugin manager then you should either add these dependencies 
 		to your application's composer.json file or use the 
-		jim-moser/zf2-validators-empty-or-plugin instead of the 
+		jim-moser/zf2-validators-empty-or-plugin package instead of the 
 		jim-moser/zf2-validators-empty-or package.</p>
 		
 		<p>The JimMoser\OrChain and	JimMoser\VerboseOrChain classes use the 
 		validator plugin manager to add validators by name. For example, the 
-		code below used the validator plugin manager to create an instance of 
+		code below uses the validator plugin manager to create an instance of 
 		the Zend/Validators/NotEmpty class.</p>
 		
 			$orChain = new \JimMoser\OrChain();
@@ -64,13 +65,19 @@ README.md file for the jim-moser/zf2-validators-empty-or package available at
 		EmptyValidator, OrChain, and VerboseOrChain validators given strings 
 		containing their names.</p>
 		
-		<p>This package depends directly on jim-moser/zf2-validators-empty-or, 
-		zendframework/zend-modules, zendframework/zend-servicemanager, and 
-		zendframework/zend-i18n. However it appears that zend-modules or its' 
-		dependencies has many dependencies on various zendframework packages not 
-		specified in their composer.json files. Thus in practice using 
-		jim-moser/zf2-validators-empty-or-plugin requires a dependency on 
+		<p>Depends directly only on jim-moser/zf2-validators-empty-or and 
 		zendframework/zendframework.</p>
+		
+		<p>The code provided by this package only depends directly on code and 
+		classes provided by the jim-moser/zf2-validators-empty-or package and 
+		its' dependencies, and the zendframework/zend-modules package. However 
+		it appears that the code within zend-modules and/or its' dependencies 
+		has many dependencies on code and classes within various zendframework 
+		packages not specified as dependencies within the composer.json files of 
+		zend-modules and its' dependencies. To prevent this issue from causing 
+		problems, the jim-moser/zf2-validators-empty-or-plugin package was given  
+		a dependency on the zendframework/zendframework package which installs 
+		all of Zend Framework 2.</p>
 	</dd>
 	<dt>jim-moser/zf2-validators-empty-or-plugin-test</dt>
 	<dd><p>Package containing unit tests for
@@ -86,31 +93,20 @@ README.md file for the jim-moser/zf2-validators-empty-or package available at
 
 ##Alternative 1: Installation with Composer
 
-1. Move to desired installation directory.
-
-	To install into an existing Zend Framework 2 installation that was installed 
-	using Composer, locate the `composer.json` file located in the directory 
-	containing the vendor directory and move into that directory. 
+1. For an existing Zend Framework installation, move into the parent of the 
+	vendor directory. This directory should contain an existing composer.json 
+	file. For a new installation, move into the directory you would like to 
+	contain the vendor directory.
 	
-	Otherwise if creating a new installation, move into the directory that you  
-	would like to contain the vendor directory.
-
 		$ cd <parent_path_of_vendor>	
 	
-2. Use composer to update the composer.json file and install the 
-	jim-moser/zf2-validators-empty-or-test package and its dependencies.
+2. Run the following command which will update the composer.json file, install 
+	the zf2-validators-empty-or-plugin-test package and its dependencies into 
+	their respective directories under the vendor directory, and update the 
+	composer autoloading files.
 
 		$ composer require jim-moser/zf2-validators-empty-or-test
 	
-This should first update the composer.json file and then install the 
-zf2-validators-empty-or package into the 
-vendor/jim-moser/zf2-validators-empty-or directory, install the 
-zf2-validators-empty-or-test package into the 
-vendor/jim-moser/zf2-validators-empty-or-test directory, and update the 
-composer autoloading files (vendor/composer/autoload_classmap.php and/or 
-autoload_psr4.php) such that the added validators should now be accessible from 
-within your Zend Framework application.
-
 ##Alternative 2: Manual Installation to Vendor Directory
 
 If you would like to install the packages manually and use a Module.php file to 

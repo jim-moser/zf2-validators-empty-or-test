@@ -3,9 +3,11 @@
  * Sample TranslatorInterface implementation created for use in unit tests.
  *
  * @author    Jim Moser <jmoser@epicride.info>
- * @link      http://github.com/jim-moser/zf2/validator for source repository
+ * @link      http://github.com/jim-moser/zf2-validators-empty-or-test for 
+ *            source repository.
  * @copyright Copyright (c) June 9, 2016 Jim Moser
- * @license   LICENSE.txt at http://github.com/jim-moser/zf2/validator
+ * @license   LICENSE.txt at http://github.com/jim-moser/
+ *            zf2-validators-empty-or-test
  *            New BSD License
  */
 namespace JimMoser\ValidatorTest;
