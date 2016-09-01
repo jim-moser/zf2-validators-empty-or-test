@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- If not using Composer for package installation and	autoloading:
+		1. Install jim-moser\zf2-validators-empty-or, 
+			jim-moser\zf2-validators-empty-or-plugin, and 
+			jim-moser\zf2-validators-empty-or-plugin-test packages in addition 
+			to this package.
+		2. Rename this file to phpunit.xml.
+-->
+<phpunit
+    bootstrap="../zf2-validators-empty-or-plugin-test/test/bootstrap.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    verbose="true"
+    stopOnFailure="false"
+    processIsolation="false"
+    backupGlobals="false"
+    syntaxCheck="true"
+>
+    <testsuite name="JimMoser\Validator\Empty, OrChain, and VerboseOrChain unit tests">
+        <directory>./test</directory>
+    </testsuite>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+</phpunit>

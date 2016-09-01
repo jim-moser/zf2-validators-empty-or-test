@@ -2,96 +2,37 @@
 namespace JimMoser\ValidatorTest;
 
 use JimMoser\Validator\EmptyValidator;
+use Zend\ServiceManager\Config;
+use Zend\Validator\ValidatorPluginManager;
 
 /**
- * Unit testing for Empty.
+ * Unit testing to verify ValidatorPluginManager is configured to obtain 
+ * instances of added validators.
  *
  * @author    Jim Moser <jmoser@epicride.info>
- * @link      http://github.com/jim-moser/zf2-validators-empty-or-test for
+ * @link      http://github.com/jim-moser/zf2-validators-empty-or-test for 
  *            source repository.
- * @copyright Copyright (c) June 9, 2016 Jim Moser
+ * @copyright Copyright (c) July 11, 2016 Jim Moser
  * @license   LICENSE.txt at http://github.com/jim-moser/
  *            zf2-validators-empty-or-test  
  *            New BSD License
  */
-class EmptyValidatorTest extends \PHPUnit_Framework_TestCase
+class ValidatorPluginManagerTest extends \PHPUnit_Framework_TestCase
 {
     protected $emptyValidator;
     
     public function Setup()
     {
-        $this->emptyValidator = new EmptyValidator();
-        
-        // Reset message length for all classes inheriting from 
-        // Zend\Validator\AbstractValidator in case the message length was 
-        // changed in any tests.
-        $this->emptyValidator->setMessageLength();
-    }
-    
-    public function testConstructorTraversableOptions()
-    {
-        $iterator = new \ArrayObject(array(
-                        'non_existing_option' => 'some other value',
-                        'type' => 'integer',
-                        'messageLength' => 9,
-        ));
-        $this->assertTrue($iterator instanceof \Traversable);
-        $this->emptyValidator = new EmptyValidator($iterator);
-        $messageLength = $this->emptyValidator->getMessageLength();
-        $this->assertEquals(9, $messageLength);
-        $this->integerTest();
-    }
-    
-    public function testConstructorArrayOptions()
-    {
-        $iterator = new \ArrayObject(array(
-                        'non_existing_option' => 'some other value',
-                        'type' => 'integer',
-                        'messageLength' => 9,
-        ));
-        $this->assertTrue($iterator instanceof \Traversable);
-        $this->emptyValidator = new EmptyValidator($iterator);
-        $messageLength = $this->emptyValidator->getMessageLength();
-        $this->assertEquals(9, $messageLength);
-        $this->integerTest();
-        
-        // Type is an array containing a non-integer value.
-        $iterator = new \ArrayObject(array(
-                        'non_existing_option' => 'some other value',
-                        'type' => array('integer'),
-                        'messageLength' => 9,
-        ));
-        $this->assertTrue($iterator instanceof \Traversable);
-        $this->emptyValidator = new EmptyValidator($iterator);
-        $messageLength = $this->emptyValidator->getMessageLength();
-        $this->assertEquals(9, $messageLength);
-        $this->integerTest();
-    }
-    
-    public function testGetDefaultType()
-    {
-        $defaultType = $this->emptyValidator->getDefaultType();
-        $this->assertEquals(489, $defaultType);    
-    }
-    
-    public function testInvalidValue()
-    {
-        $fileResource = opendir('.');
-        $result = $this->emptyValidator->isValid($fileResource);
-        $this->assertFalse($result);
-        $messages = $this->emptyValidator->getMessages();
-        $referenceMessages = array(EmptyValidator::INVALID => 'Invalid type given. String, integer, float, ' .
-            'boolean, array, or object expected.'
+        $configArray = array(
+            'invokables' => array(
+                'EmptyValidator' => 'JimMoser\Validator\EmptyValidator',
+                'OrChain' => 'JimMoser\Validator\OrChain',
+                'VerboseOrChain' => 'JimMoser\Validator\VerboseOrChain',
+            ),
         );
-        $this->assertEquals($referenceMessages, $messages);
-    }
-    
-    /**
-     * @expectedException Zend\Validator\Exception\InvalidArgumentException
-     */
-    public function testSetInvalidType()
-    {
-        $this->emptyValidator->setType(-5);
+        $config = new Config($configArray);
+        $pluginManager = new ValidatorPluginManager($config);
+        $this->emptyValidator = $pluginManager->get('EmptyValidator');
     }
     
     public function testDefaultEmptyTypes()
@@ -352,11 +293,6 @@ class EmptyValidatorTest extends \PHPUnit_Framework_TestCase
     public function testInteger()
     {
         $this->emptyValidator->setType(EmptyValidator::INTEGER);
-        $this->integerTest();
-    }
-    
-    public function integerTest()
-    {
     
         // Object. Any objects to be considered invalid.
         $this->assertFalse($this->emptyValidator->
