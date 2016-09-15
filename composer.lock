@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "90cb5b6012d0e1e75dc173a14543966f",
-    "content-hash": "9a81d5f815ed246ca84d9c568f914959",
+    "hash": "eda9855dfde047e1b8f5469e8e5542d7",
+    "content-hash": "42746755f6a9ad7db90641b44536e992",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -90,16 +90,16 @@
         },
         {
             "name": "jim-moser/zf2-validators-empty-or",
-            "version": "dev-master",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jim-moser/zf2-validators-empty-or.git",
-                "reference": "e7b4d58b37d8c2c7903d262ae4c2b954e8cd7bb8"
+                "reference": "bcf016107760bf93847eaec337e74c6153491ead"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jim-moser/zf2-validators-empty-or/zipball/e7b4d58b37d8c2c7903d262ae4c2b954e8cd7bb8",
-                "reference": "e7b4d58b37d8c2c7903d262ae4c2b954e8cd7bb8",
+                "url": "https://api.github.com/repos/jim-moser/zf2-validators-empty-or/zipball/bcf016107760bf93847eaec337e74c6153491ead",
+                "reference": "bcf016107760bf93847eaec337e74c6153491ead",
                 "shasum": ""
             },
             "require": {
@@ -113,6 +113,7 @@
                     "JimMoser\\Validator\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -120,7 +121,7 @@
                 {
                     "name": "Jim Moser",
                     "email": "jmoser@epicride.info",
-                    "homepage": "http://epicride.info/jmoser/zendframework"
+                    "homepage": "http://epicride.info/JimMoser/zendframework"
                 }
             ],
             "description": "Logical OR validator chains and empty value validator for Zend Framework 2.",
@@ -130,11 +131,7 @@
                 "validator",
                 "zf2"
             ],
-            "support": {
-                "source": "https://github.com/jim-moser/zf2-validators-empty-or/tree/0.0.6",
-                "issues": "https://github.com/jim-moser/zf2-validators-empty-or/issues"
-            },
-            "time": "2016-09-01 17:03:50"
+            "time": "2016-09-15 20:57:27"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -1089,16 +1086,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.1.3",
+            "version": "v3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "1819adf2066880c7967df7180f4f662b6f0567ac"
+                "reference": "f291ed25eb1435bddbe8a96caaef16469c2a092d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/1819adf2066880c7967df7180f4f662b6f0567ac",
-                "reference": "1819adf2066880c7967df7180f4f662b6f0567ac",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f291ed25eb1435bddbe8a96caaef16469c2a092d",
+                "reference": "f291ed25eb1435bddbe8a96caaef16469c2a092d",
                 "shasum": ""
             },
             "require": {
@@ -1134,7 +1131,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-07-17 14:02:08"
+            "time": "2016-09-02 02:12:52"
         },
         {
             "name": "webmozart/assert",
@@ -1246,16 +1243,16 @@
         },
         {
             "name": "zendframework/zend-servicemanager",
-            "version": "2.7.6",
+            "version": "2.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-servicemanager.git",
-                "reference": "a6db4d13b9141fccce5dcb553df0295d6ad7d477"
+                "reference": "eeecb78945c2a9f653caded36ba5274e8a8f5468"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/a6db4d13b9141fccce5dcb553df0295d6ad7d477",
-                "reference": "a6db4d13b9141fccce5dcb553df0295d6ad7d477",
+                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/eeecb78945c2a9f653caded36ba5274e8a8f5468",
+                "reference": "eeecb78945c2a9f653caded36ba5274e8a8f5468",
                 "shasum": ""
             },
             "require": {
@@ -1294,7 +1291,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2016-04-27 19:07:40"
+            "time": "2016-09-01 19:03:15"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -1430,9 +1427,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "jim-moser/zf2-validators-empty-or": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
