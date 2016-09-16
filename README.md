@@ -13,14 +13,15 @@ zf2-validators-empty-or package.
 
 Related packages:
 
-* jim-moser/zf2-validators-empty-or
-* jim-moser/zf2-validators-empty-or-test
-* jim-moser/zf2-validators-empty-or-plugin
-* jim-moser/zf2-validators-empty-or-plugin-test
+* [jim-moser/zf2-validators-empty-or](https://github.com/jim-moser/zf2-validators-empty-or/)
+* [jim-moser/zf2-validators-empty-or-test](https://github.com/jim-moser/zf2-validators-empty-or-test/)
+* [jim-moser/zf2-validators-empty-or-plugin](https://github.com/jim-moser/zf2-validators-empty-or-plugin/)
+* [jim-moser/zf2-validators-empty-or-plugin-test](https://github.com/jim-moser/zf2-validators-empty-or-plugin-test/)
 	
 A brief description of the related packages listed above can be found in the 
-README.md file for the jim-moser/zf2-validators-empty-or package available at 
-[Github] (https://github.com/jim-moser/zf2-validators-empty-or/README.md). 
+README.md file for the 
+[jim-moser/zf2-validators-empty-or](https://github.com/jim-moser/zf2-validators-empty-or/) 
+package. 
 
 #Installation
 
@@ -44,8 +45,9 @@ README.md file for the jim-moser/zf2-validators-empty-or package available at
 
 If you would like to install the packages manually and use a Module.php file to 
 configure autoloading instead of using Composer to configure autoloading then 
-use the jim-moser/zf2-validators-empty-or-plugin-test package instead of this 
-package. Follow the instructions in the README.md file of that package.
+use the [jim-moser/zf2-validators-empty-or-plugin-test](https://github.com/jim-moser/zf2-validators-empty-or-plugin-test/) 
+package instead of this package. Follow the instructions in the README.md file 
+of that package.
 
 #Unit Testing
 
