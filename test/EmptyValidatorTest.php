@@ -2,6 +2,8 @@
 namespace JimMoser\ValidatorTest;
 
 use JimMoser\Validator\EmptyValidator;
+use PHPUnit\Framework\TestCase;
+use Zend\Validator\Exception\InvalidArgumentException;
 
 /**
  * Unit testing for Empty.
@@ -14,11 +16,11 @@ use JimMoser\Validator\EmptyValidator;
  *            zf2-validators-empty-or-test  
  *            New BSD License
  */
-class EmptyValidatorTest extends \PHPUnit_Framework_TestCase
+class EmptyValidatorTest extends TestCase
 {
     protected $emptyValidator;
     
-    public function Setup()
+    public function setUp(): void
     {
         $this->emptyValidator = new EmptyValidator();
         
@@ -86,11 +88,13 @@ class EmptyValidatorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($referenceMessages, $messages);
     }
     
+    //To do. Clean up.
     /**
      * @expectedException Zend\Validator\Exception\InvalidArgumentException
      */
     public function testSetInvalidType()
     {
+        $this->expectException(InvalidArgumentException::class);
         $this->emptyValidator->setType(-5);
     }
     

@@ -19,7 +19,7 @@
     "require": {
     	"jim-moser/zf2-validators-empty-or": "^1.0.0",
     	"zendframework/zend-servicemanager": "2.*",
-    	"phpunit/phpunit":                   "~4"
+        "phpunit/phpunit": "^9"
     },
     "autoload": {
         "psr-4": {

@@ -3,6 +3,7 @@ namespace JimMoser\ValidatorTest;
 
 use JimMoser\Validator\VerboseOrChain;
 use JimMoser\Validator\EmptyValidator;
+use PHPUnit\Framework\TestCase;
 use Zend\InputFilter\Input;
 use Zend\InputFilter\InputFilter;
 use Zend\Validator\Between;
@@ -22,13 +23,13 @@ use Zend\Validator\ValidatorPluginManager;
  *            zf2-validators-empty-or-test  
  *            New BSD License
  */
-class VerboseOrChainTest extends \PHPUnit_Framework_TestCase
+class VerboseOrChainTest extends TestCase
 {
     protected $lt5_Or_Gt10_OrValidator;
     protected $referenceDefaultUnionMessage;
     protected $lt5_Or_Gt10_ReferenceMessages;
     
-    public function Setup()
+    public function setUp(): void
     {
         $lessThanValidator = new LessThan(array('max' => 5,
                                                 'inclusive' => false));

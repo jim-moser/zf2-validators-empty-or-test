@@ -2,6 +2,7 @@
 namespace JimMoser\ValidatorTest;
 
 use JimMoser\Validator\EmptyValidator;
+use PHPUnit\Framework\TestCase;
 use Zend\ServiceManager\Config;
 use Zend\Validator\ValidatorPluginManager;
 
@@ -17,11 +18,11 @@ use Zend\Validator\ValidatorPluginManager;
  *            zf2-validators-empty-or-test  
  *            New BSD License
  */
-class ValidatorPluginManagerTest extends \PHPUnit_Framework_TestCase
+class ValidatorPluginManagerTest extends TestCase
 {
     protected $emptyValidator;
     
-    public function Setup()
+    public function setUp(): void
     {
         $configArray = array(
             'invokables' => array(

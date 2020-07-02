@@ -16,7 +16,6 @@
     stopOnFailure="false"
     processIsolation="false"
     backupGlobals="false"
-    syntaxCheck="true"
 >
     <testsuite name="JimMoser\Validator\Empty, OrChain, and VerboseOrChain unit tests">
         <directory>./test</directory>
