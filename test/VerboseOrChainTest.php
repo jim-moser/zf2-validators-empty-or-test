@@ -4,13 +4,13 @@ namespace JimMoser\ValidatorTest;
 use JimMoser\Validator\VerboseOrChain;
 use JimMoser\Validator\EmptyValidator;
 use PHPUnit\Framework\TestCase;
-use Zend\InputFilter\Input;
-use Zend\InputFilter\InputFilter;
-use Zend\Validator\Between;
-use Zend\Validator\LessThan;
-use Zend\Validator\GreaterThan;
-use Zend\Validator\ValidatorChain;
-use Zend\Validator\ValidatorPluginManager;
+use Laminas\InputFilter\Input;
+use Laminas\InputFilter\InputFilter;
+use Laminas\Validator\Between;
+use Laminas\Validator\LessThan;
+use Laminas\Validator\GreaterThan;
+use Laminas\Validator\ValidatorChain;
+use Laminas\Validator\ValidatorPluginManager;
 
 /**
  * Unit test class for Validator\VerboseOrChain.
@@ -39,7 +39,7 @@ class VerboseOrChainTest extends TestCase
         $this->lt5_Or_Gt10_OrValidator->attach($lessThanValidator)
                                       ->attach($moreThanValidator);
 
-        // Need to reset static Zend\Validator\AbstractValidator::messageLength
+        // Need to reset static Laminas\Validator\AbstractValidator::messageLength
         // property to its original value in case it is changed in any tests.
         $this->lt5_Or_Gt10_OrValidator->setMessageLength(-1);
         
@@ -52,7 +52,7 @@ class VerboseOrChainTest extends TestCase
     }
     
     /*
-    public function testZendInputFilter()
+    public function testLaminasInputFilter()
     {
         $validatorChain = new ValidatorChain();
         $validatorChain->attach($this->lt5_Or_Gt10_OrValidator);
@@ -473,7 +473,7 @@ class VerboseOrChainTest extends TestCase
         $this->assertEquals(2, $validatorCount);
         
         $pluginManager = $this->lt5_Or_Gt10_OrValidator->getPluginManager();
-        $this->assertEquals('Zend\Validator\ValidatorPluginManager',
+        $this->assertEquals('Laminas\Validator\ValidatorPluginManager',
                             get_class($pluginManager));
         $pluginManager = new ValidatorPluginManager();
         $returnValue = $this->lt5_Or_Gt10_OrValidator->

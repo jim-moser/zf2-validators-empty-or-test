@@ -12,7 +12,7 @@
  */
 namespace JimMoser\ValidatorTest;
 
-use Zend\Validator\Translator\TranslatorInterface;
+use Laminas\Validator\Translator\TranslatorInterface;
 
 class MockTranslator implements TranslatorInterface
 {

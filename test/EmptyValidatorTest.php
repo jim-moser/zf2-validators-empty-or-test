@@ -3,7 +3,7 @@ namespace JimMoser\ValidatorTest;
 
 use JimMoser\Validator\EmptyValidator;
 use PHPUnit\Framework\TestCase;
-use Zend\Validator\Exception\InvalidArgumentException;
+use Laminas\Validator\Exception\InvalidArgumentException;
 
 /**
  * Unit testing for Empty.
@@ -25,7 +25,7 @@ class EmptyValidatorTest extends TestCase
         $this->emptyValidator = new EmptyValidator();
         
         // Reset message length for all classes inheriting from 
-        // Zend\Validator\AbstractValidator in case the message length was 
+        // Laminas\Validator\AbstractValidator in case the message length was 
         // changed in any tests.
         $this->emptyValidator->setMessageLength();
     }
@@ -90,7 +90,7 @@ class EmptyValidatorTest extends TestCase
     
     //To do. Clean up.
     /**
-     * @expectedException Zend\Validator\Exception\InvalidArgumentException
+     * @expectedException Laminas\Validator\Exception\InvalidArgumentException
      */
     public function testSetInvalidType()
     {

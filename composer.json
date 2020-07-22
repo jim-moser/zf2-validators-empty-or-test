@@ -16,10 +16,16 @@
             "homepage": "http://epicride.info/JimMoser/zendframework"
         }
     ],
+    "config": {
+    	"sort-packages": true
+    },
     "require": {
-    	"jim-moser/zf2-validators-empty-or": "^1.0.0",
-    	"zendframework/zend-servicemanager": "2.*",
-        "phpunit/phpunit": "^9"
+    	"jim-moser/zf2-validators-empty-or": "^1",
+        "laminas/laminas-inputfilter": "^2",
+        "laminas/laminas-servicemanager": "^2",
+        "laminas/laminas-validator": "^2",
+        "phpunit/phpunit": "^9",
+        "laminas/laminas-dependency-plugin": "^1.0"
     },
     "autoload": {
         "psr-4": {

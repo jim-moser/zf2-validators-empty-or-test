@@ -3,8 +3,8 @@ namespace JimMoser\ValidatorTest;
 
 use JimMoser\Validator\EmptyValidator;
 use PHPUnit\Framework\TestCase;
-use Zend\ServiceManager\Config;
-use Zend\Validator\ValidatorPluginManager;
+use Laminas\ServiceManager\Config;
+use Laminas\Validator\ValidatorPluginManager;
 
 /**
  * Unit testing to verify ValidatorPluginManager is configured to obtain 

@@ -27,7 +27,7 @@ package.
 
 ##Alternative 1: Installation with Composer
 
-1. For an existing Zend Framework installation, move into the parent of the 
+1. For an existing Laminas Framework installation, move into the parent of the 
 	vendor directory. This directory should contain an existing composer.json 
 	file. For a new installation, move into the directory you would like to 
 	contain the vendor directory.
