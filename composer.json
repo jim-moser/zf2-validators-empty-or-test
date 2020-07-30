@@ -24,8 +24,7 @@
         "laminas/laminas-inputfilter": "^2",
         "laminas/laminas-servicemanager": "^2",
         "laminas/laminas-validator": "^2",
-        "phpunit/phpunit": "^9",
-        "laminas/laminas-dependency-plugin": "^1.0"
+        "phpunit/phpunit": "^9"
     },
     "autoload": {
         "psr-4": {
